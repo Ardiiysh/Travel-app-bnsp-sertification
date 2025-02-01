@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\PegawaiController;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 
@@ -23,5 +24,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('saya', BiodataController::class);
+Route::resource('pegawais', PegawaiController::class);
 
 require __DIR__.'/auth.php';
